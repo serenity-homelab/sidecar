@@ -85,6 +85,9 @@ func GetDatabaseCreds(fileName string) (*DatabaseCreds, error) {
 }
 
 type DatabaseCreds struct {
-	Username string `json:"username"`
-	Password string `json:"password"`
+	Username          string `json:"username"`
+	Password          string `json:"password"`
+	LastVaultRotation string `json:"last_vault_rotation"`
+	RotationPeriod    int    `json:"rotation_period"`
+	TTL               int    `json:"ttl"`
 }
